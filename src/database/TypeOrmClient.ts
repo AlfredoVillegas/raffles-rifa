@@ -26,7 +26,7 @@ export function getDataBaseConfig() {
       username: postgresConfig.username,
       password: postgresConfig.password,
       database: postgresConfig.database,
-      entities: [`${__dirname}/../../src/modules/**/*{.js,.ts}`],
+      entities: [`${__dirname}/../../src/modules/**/*{Model.js,Model.ts}`],
       ssl: {
         rejectUnauthorized: false
       }

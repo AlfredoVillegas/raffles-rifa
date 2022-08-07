@@ -1,9 +1,7 @@
 import { AppDataSource, createTypeOrmClientConnection, getDataBaseConfig } from './TypeOrmClient';
 
 async function syncTypeOrmSchema() {
-  const config = getDataBaseConfig();
-
-  await createTypeOrmClientConnection();
+  //await createTypeOrmClientConnection();
 
   AppDataSource.synchronize();
 
