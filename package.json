@@ -11,6 +11,7 @@
     "build:tsc": "tsc -p tsconfig.prod.json",
     "build:copy": "copyfiles 'src/**/*.{json,yaml,html,png,ico,css,js}' 'dist/'",
     "build:clean": "rm -r dist; exit 0",
+    "typeorm": "typeorm-ts-node-esm",
     "sync:typeorm:schema": "ts-node ./src/database/syncTypeOrmSchema.ts"
   },
   "author": "",
