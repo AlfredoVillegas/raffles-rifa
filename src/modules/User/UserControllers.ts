@@ -5,9 +5,11 @@ import { getUser, loginUser, registerUser } from './UserServices';
 
 export async function registerUserController(req: Request, res: Response): Promise<void> {
   const { name, email, phone, password } = req.body;
+  const emailNormalize = email.toLocaleLowerCase().trim();
 
   try {
-    const newUser = await registerUser({ name, email, phone, password });
+    const newUser = await registerUser({ name, email: emailNormalize, phone, password });
+
     const accessToken = createToken(newUser);
 
     responseSuccess(res, 201, { user: newUser, accessToken });
