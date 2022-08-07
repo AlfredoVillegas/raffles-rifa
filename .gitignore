@@ -4,3 +4,4 @@ project.sql
 project.sql-shm
 project.sql-wal
 pru.ts
+dist
